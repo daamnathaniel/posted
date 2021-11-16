@@ -1,0 +1,12 @@
+-# frozen_string_literal: true
+%h3 Post a Comment
+
+= form_for [ @article, @comment ] do |f|
+  %p  
+    = f.label :author_name
+    = f.text_field :author_name
+  %p
+    = f.label :body
+    = f.text_area :body
+  %p
+    = f.submit 'submit'
