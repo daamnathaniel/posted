@@ -3,10 +3,10 @@
 
 = form_for [ @article, @comment ] do |f|
   %p  
-    = f.label :author_name
+    = f.label :author_name, "your name"
     = f.text_field :author_name
   %p
-    = f.label :body
+    = f.label :body, "your comment"
     = f.text_area :body
   %p
     = f.submit 'submit'
