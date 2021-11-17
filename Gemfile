@@ -17,7 +17,9 @@ gem 'jbuilder', '~> 2.7'
 gem 'haml-rails'
 gem 'simple_form'
 gem 'devise'
-
+gem 'materialize-sass'
+gem 'bootstrap'
+gem 'humanize'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 

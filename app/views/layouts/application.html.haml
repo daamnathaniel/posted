@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title Posted
+    %meta{content: 'width=device-width,initial-scale=1', name: 'viewport'}/
+    %link{href: 'https://www.w3schools.com/w3css/4/w3.css', rel: 'stylesheet'}/
+    %link{rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100&display=swap"}
+
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    .w3-panel.w3-flat-concrete.w3-round-large    
+      = render 'layouts/navbar'
+    .w3-panel.w3-neutral-grey.w3-round-large
+      = yield

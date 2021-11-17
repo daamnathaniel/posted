@@ -1,15 +1,25 @@
-%p#notice= notice
+.container-fluid.mt-3
+  %h1= @article.title
+  %p#notice= notice  
+  = link_to 'Edit', edit_article_path(@article)
+  = link_to 'Back', articles_path
 
-%h2= @article.title
-%p= @article.body
+  .container-fluid
+    .row
+      .col-sm-3.bg-primary.text-white
+        %h3 
+          Comments
+          = @article.comments.size
 
-= link_to 'Edit', edit_article_path(@article)
-= link_to 'Back', articles_path
+          = render partial: 'articles/comment', collection: @article.comments.reverse
+          = render partial: 'comments/form'
+      .col-sm-9.bg-dark.text-white
+        %p= @article.body
 
 
-%h3 Comments
-= @article.comments.size
 
-= render partial: 'articles/comment', collection: @article.comments.reverse
-
-= render partial: 'comments/form'
+.container.mt-3
+  %h2= @article.title
+  .mt-4.p-5.bg-primary.text-white.rounded
+    %h1= @article.author
+    %p= @article.body
